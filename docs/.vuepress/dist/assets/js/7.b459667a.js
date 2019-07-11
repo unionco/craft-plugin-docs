@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{188:function(t,n,e){"use strict";e.r(n);var s=e(0),l=Object(s.a)({},function(){var t=this.$createElement,n=this._self._c||t;return n("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[n("h1",[this._v("SyncDB")])])},[],!1,null,null,null);n.default=l.exports}}]);
