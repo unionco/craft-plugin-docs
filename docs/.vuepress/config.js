@@ -37,6 +37,16 @@ module.exports = {
                 link: 'https://www.union.co/'
             }
         ],
+        sidebar: {
+            '/craft-sync-db/': [
+                '', /* /craft-sync-db/ */
+            ],
+            '/syncdb/': [],
+            // fallback
+            '/': [
+                '',
+            ]
+        },
         codeLanguages: {
             twig: 'Twig',
             php: 'PHP',
