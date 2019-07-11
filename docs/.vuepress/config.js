@@ -25,6 +25,10 @@ module.exports = {
         // },
         nav: [
             {
+                text: 'Home',
+                link: '/'
+            },
+            {
                 text: 'Craft SyncDB',
                 link: '/craft-sync-db/'
             },
@@ -41,7 +45,9 @@ module.exports = {
             '/craft-sync-db/': [
                 '', /* /craft-sync-db/ */
             ],
-            '/syncdb/': [],
+            '/syncdb/': [
+                '',
+            ],
             // fallback
             '/': [
                 '',

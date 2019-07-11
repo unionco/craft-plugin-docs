@@ -1,4 +1,6 @@
-# Overview 
+# Craft SyncDB
+
+## Overview 
 
 Craft 3 plugin to sync database across environments
 
