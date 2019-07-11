@@ -1,10 +1,10 @@
 # Craft SyncDB
 
+<img src="../../resources/sync-db.png" height="160px"/>
+
 ## Overview 
 
 Craft 3 plugin to sync database across environments
-
-<img src="../../resources/craft-sync-db-logo.svg" height="200px" width="200px"/>
 
 craft-sync-db uses [`unionco/syncdb`](/syncdb/) to perform database synchronization across your different environments. Both MySQL and PostgreSQL databases are supported.
 
