@@ -6,6 +6,7 @@ module.exports = {
 
     // ga: 'UA-39036834-9',
     // base: '/v3/',
+    base: '/craft-plugin-docs/',
     // shouldPrefetch: () => false,
     // locales: {
     //     '/': {
@@ -19,9 +20,9 @@ module.exports = {
         // docsBranch: 'develop',
         editLinks: true,
         // searchMaxSuggestions: 10,
-        locales: {
-            '/': require('./config-en'),
-        },
+        // locales: {
+        //     '/': require('./config-en'),
+        // },
         nav: [
             {
                 text: 'Craft SyncDB',
