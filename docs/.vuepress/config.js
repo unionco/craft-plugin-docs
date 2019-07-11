@@ -1,25 +1,23 @@
 // var craftdocs = require('vuepress-theme-craftdocs');
 
 module.exports = {
-    // theme: 'craftdocs'
-// };
-
+    theme: 'craftdocs',
     // ga: 'UA-39036834-9',
     // base: '/v3/',
     base: '/craft-plugin-docs/',
     // shouldPrefetch: () => false,
-    // locales: {
-    //     '/': {
-    //         lang: 'en-US',
-    //         title: 'Craft 3 Documentation',
-    //     }
-    // },
+    locales: {
+        '/': {
+            lang: 'en-US',
+            title: 'Union Craft Plugins',
+        }
+    },
     themeConfig: {
-        // docsRepo: 'craftcms/cms',
-        // docsDir: 'docs',
-        // docsBranch: 'develop',
+        docsRepo: 'unionco/craft-plugin-docs',
+        docsDir: 'docs',
+        docsBranch: 'develop',
         editLinks: true,
-        // searchMaxSuggestions: 10,
+        searchMaxSuggestions: 10,
         // locales: {
         //     '/': require('./config-en'),
         // },
@@ -31,6 +29,10 @@ module.exports = {
             {
                 text: 'Craft SyncDB',
                 link: '/craft-sync-db/'
+            },
+            {
+                text: 'Calendarize',
+                link: '/calendarize/'
             },
             {
                 text: 'SyncDB',
@@ -46,6 +48,9 @@ module.exports = {
                 '', /* /craft-sync-db/ */
             ],
             '/syncdb/': [
+                '',
+            ],
+            '/calendarize/': [
                 '',
             ],
             // fallback
