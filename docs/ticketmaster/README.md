@@ -24,10 +24,35 @@ To install the plugin, follow these instructions.
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Ticketmaster.
 
 ---
-## Ticketmaster Overview
-wip
+## Ticketmaster Settings
+- Consumer Key
+
+    Ticketmaster consumer key variable located in your `.env` file
+- Consumer Secret
+
+    Ticketmaster consumer secret variable located in your `.env` file
+
+    >Note: For the two fields above, begin typing the environment variable names located in your `.env` file and the field will automatically populate the values
+
+- Section
+
+    Section to map the ticketmaster events when published
+- Entry Type
+
+    Entry Type to map the ticketmaster events when published
+- Enable when published
+
+    When you publish an event, should the entry be enabled by default or not. Keep in mind that if you have other custom required fields, enabling this feature will cause problems.
+
 
 ---
+## Fields
+
+### Event Search
+
+### Venue Search
+
+___
 ## Usage
 wip
 
@@ -37,6 +62,11 @@ wip
 wip
 
 ---
+
+## Plugin Event Hooks
+
+wip
+___
 ## Dependencies
 
 wip
