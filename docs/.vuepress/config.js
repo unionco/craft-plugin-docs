@@ -39,6 +39,10 @@ module.exports = {
                 link: '/syncdb/'
             },
             {
+                text: 'Ticketmaster',
+                link: '/ticketmaster/'
+            },
+            {
                 text: 'UNION',
                 link: 'https://www.union.co/'
             }
@@ -51,6 +55,9 @@ module.exports = {
                 '',
             ],
             '/calendarize/': [
+                '',
+            ],
+            '/ticketmaster/': [
                 '',
             ],
             // fallback
