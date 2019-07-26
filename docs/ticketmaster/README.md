@@ -25,24 +25,24 @@ To install the plugin, follow these instructions.
 
 ---
 ## Ticketmaster Settings
-- Consumer Key
+### Consumer Key
+Ticketmaster consumer key variable located in your `.env` file
+### Consumer Secret
 
-    Ticketmaster consumer key variable located in your `.env` file
-- Consumer Secret
+Ticketmaster consumer secret variable located in your `.env` file
 
-    Ticketmaster consumer secret variable located in your `.env` file
+>Note: For the two fields above, begin typing the environment variable names located in your `.env` file and the field will automatically populate the values
+### Section
 
-    >Note: For the two fields above, begin typing the environment variable names located in your `.env` file and the field will automatically populate the values
+Section to map the ticketmaster events when published
 
-- Section
+### Entry Type
 
-    Section to map the ticketmaster events when published
-- Entry Type
+Entry Type to map the ticketmaster events when published
 
-    Entry Type to map the ticketmaster events when published
-- Enable when published
+### Enable when published
 
-    When you publish an event, should the entry be enabled by default or not. Keep in mind that if you have other custom required fields, enabling this feature will cause problems.
+When you publish an event, should the entry be enabled by default or not. Keep in mind that if you have other custom required fields, enabling this feature will cause problems.
 
 
 ---
@@ -54,8 +54,28 @@ To install the plugin, follow these instructions.
 
 ___
 ## Usage
-wip
 
+### Dashboard
+
+The plugin dashboard is where you can get a high level view of your venues and a breakdown of all of the events by their current status.
+
+#### New Events
+Events yet to be published that have been returned from the Ticketmaster API
+
+#### Updated Events
+Published events that have been updated in Ticketmaster since they were published on your site
+
+#### Published Events
+The number of events currently published on your site.
+
+### Creating Venues
+- wip
+
+### Publishing Events
+- wip
+
+### Updating events
+- wip
 ---
 ## Models
 
