@@ -33,7 +33,7 @@ Ticketmaster consumer key variable located in your `.env` file
 
 Ticketmaster consumer secret variable located in your `.env` file
 
->Note: For the two fields above, begin typing the environment variable names located in your `.env` file and the field will automatically populate the values
+>**Note**: For the two fields above, begin typing the environment variable names located in your `.env` file and the field will automatically populate the values
 ### Section
 
 Section to map the ticketmaster events when published
@@ -50,9 +50,11 @@ When you publish an event, should the entry be enabled by default or not. Keep i
 ---
 ## Fields
 
-### Event Search
-
 ### Venue Search
+Dynamic field where you can search for your specific venue. Once a venue is selected, the venue data from Ticketmaster will be populated below.
+
+### Event Search
+Like the Venue Search field, this will also let you search for a specific event from Ticketmaster and automatically populate a field set based on the data returned.
 
 ___
 ## Usage
@@ -71,13 +73,14 @@ Published events that have been updated in Ticketmaster since they were publishe
 The number of events currently published on your site.
 
 ### Creating Venues
-- wip
-
-### Publishing Events
-- wip
+Add the Venue Search field to the desired Element from the Craft Settings Menu. Once the field has been added, search for your venue, select it, and save the Element. Once the Element has been saved, the Venue will appear in the sidebar of the Events section of the plugin.
 
 ### Updating events
-- wip
+Once your Venue has been added via the Venue Search field, you can fetch events for that venue from the "Events" section of the plugin. Select your Venue from the sidebar and use the "Fetch" dropdown for that venue. The plugin will fetch all current and new events from Ticketmaster and update their status on your site accordingly.
+
+### Publishing Events
+To publish the Ticketmaster event to the desired Section/Entry Type specified in the settings, simply select one or more events from the Events section of the plugin and select "Publish" from the Action dropdown. Publishing can also be accomplished from the Event Detail page by using the Save Event dropdown and selecting "Publish Event".
+
 ---
 ## Models
 
