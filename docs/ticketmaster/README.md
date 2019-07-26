@@ -1,5 +1,7 @@
 # Craft Ticketmaster
 
+<img src="../../resources/craft-ticketmaster-plugin.png" style="maxheight:160px;"/>
+
 ## Overview
 
 PHP library to assist with syncing venues and events from the Ticketmaster API
