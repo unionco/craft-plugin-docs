@@ -73,13 +73,33 @@ Published events that have been updated in Ticketmaster since they were publishe
 The number of events currently published on your site.
 
 ### Creating Venues
-Add the Venue Search field to the desired Element from the Craft Settings Menu. Once the field has been added, search for your venue, select it, and save the Element. Once the Element has been saved, the Venue will appear in the sidebar of the Events section of the plugin.
+Add the Venue Search field to the desired Element. Once the field has been added, search for your venue, select it, and save the Element. Once the Element has been saved, the Venue will appear in the sidebar of the "Events" section of the plugin.
 
 ### Updating events
 Once your Venue has been added via the Venue Search field, you can fetch events for that venue from the "Events" section of the plugin. Select your Venue from the sidebar and use the "Fetch" dropdown for that venue. The plugin will fetch all current and new events from Ticketmaster and update their status on your site accordingly.
 
 ### Publishing Events
-To publish the Ticketmaster event to the desired Section/Entry Type specified in the settings, simply select one or more events from the Events section of the plugin and select "Publish" from the Action dropdown. Publishing can also be accomplished from the Event Detail page by using the Save Event dropdown and selecting "Publish Event".
+To publish the Ticketmaster event to the desired Section/Entry Type specified in the settings, select one or more events from the "Events" section of the plugin and select "Publish" from the Action dropdown. Publishing can also be accomplished from the Event Detail page by using the Save Event dropdown and selecting "Publish Event".
+
+## Queries
+Once the events have been fetched, you may also query the venues and events from your templates.
+
+### Venues
+```twig
+    {% set venues = craft.ticketmaster.venues %}
+    {% for venue in venues %}
+        {{ venue->title }}
+        ...
+    {% endfor %}
+```
+### Events
+```twig
+    {% set events = craft.ticketmaster.events %}
+    {% for event in events %}
+        {{ event->title }}
+        ...
+    {% endfor %}
+```
 
 ---
 ## Models
@@ -92,11 +112,7 @@ wip
 
 wip
 ___
-## Dependencies
 
-wip
-
----
 ## Ticketmaster Roadmap
 
 wip
