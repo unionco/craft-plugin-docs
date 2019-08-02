@@ -20,11 +20,11 @@ To install the plugin, follow these instructions.
 
 1. Open your terminal and go to your Craft project:
 
-        cd /path/to/project
+        `cd /path/to/project`
 
 2. Then tell Composer to load the plugin:
 
-        composer require unionco/craft-sync-db
+        `composer require unionco/craft-sync-db`
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for craft-sync-db.
 
@@ -35,7 +35,7 @@ To install the plugin, follow these instructions.
 
  There are several properties needed for each environment. Given the example config:
 
-```
+```php
 <?php
 
 use Symfony\Component\Console\Output\Output;
@@ -103,6 +103,6 @@ To use `craft-sync-db` on the command line:
 
 Some things to do, and ideas for potential features:
 
-* Release it
+* YAML Configuration
 
 Brought to you by [UNION](github.com/unionco)

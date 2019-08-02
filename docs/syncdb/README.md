@@ -17,7 +17,7 @@ $ composer require unionco/syncdb:^0.6.1
 
 ## Usage
 
-```
+```php
 <?php
 // ...
 use unionco\syncdb\SyncDb;
