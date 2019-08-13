@@ -14,6 +14,10 @@
 
     PHP library to assist with syncing venues and events from the Ticketmaster API
 
+* [Related Entry Types](/craft-related-entry-types/)
+
+    Craft 3 field type that allows more control over related entries. It extends the default Entries relationship field, but restricts the sections and entry types that can be related.
+
 ## Non-plugin Libraries
 
 * [SyncDb](/syncdb/)
