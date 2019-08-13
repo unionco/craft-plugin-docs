@@ -31,64 +31,29 @@ To install the plugin, follow these instructions.
 
 ## Configuration
 
- Configuration of remote servers is done via config file `<CRAFT_ROOT>/config/syncdb.php`. This file should be copied into your `config/` directory automatically. If it is deleted, you can copy it from `vendor/unionco/craft-sync-db/config/default.php`.
+Since version 0.7.0, configuration is stored as a YAML file in `<CRAFT_BASE_PATH>/config/syncdb.yaml`. Configuration can be edited manually or using the CP settings interface.
 
- There are several properties needed for each environment. Given the example config:
+### Global Configuration
 
-```php
-<?php
+| name | handle | description |
+|---|---|--|
+| Skip Tables | `skipTables` | Tables to ignore in the database export/import |
 
-use Symfony\Component\Console\Output\Output;
-use unionco\craftsyncdb\services\CpService;
+### Environment Configuration
 
-/**
- *  This is the default configuration that will be copied into your Craft
- *  config path, if it does not exist. Any changes to this file will be
- *  overwritten
- **/
-
- return [
-    'globals' => [
-        // Array of tables to ignore in dump (currently only supported for MySQL)
-        'ignoredTables' => [
-            'craft_templatecaches',
-            'craft_templatecachequeries',
-            'craft_templatecacheelements',
-        ],
-    ],
-    'remotes' => [
-        'production' => [
-            'username' => 'user',
-            'host' => 'example.com',
-            'root' => '/home/user/Sites/craft-project/',
-            'backupDirectory' => '/home/user/Sites/craft-project/storage/backups/databases/',
-            'port' => 22,
-            'phpPath' => '/usr/bin/php',
-            'dbDumpClientPath' => '/usr/bin/mysqldump', // Use pg_dump for Postgres
-            'verbosity' => Output::VERBOSITY_DEBUG, // See Symfony\Component\Console\Output\Output for verbosity options
-            'environment' => CpService::ENV_PRODUCTION,
-        ],
-        // 'staging' => [
-        // ...
-        // ],
-    ],
-];
-
-```
-
-Each environment requires the following properties:
-
-| property | description |
-|---|---|
-| username | SSH/server username |
-| host | SSH/server hostname or IP |
-| root | Path of the Craft installation on the server |
-| backupDirectory | Path where database backups will be created on the remote server |
-| port | SSH port |
-| phpPath | Path to `php` executable |
-| dbDumpClientPath | Path to `mysqldump` or `pg_dump` executable |
-| verbosity | Log level |
-| environment | Determines the environment, e.g. dev, staging, production. Used so that lower environments are never synced into higher environments |
+| name | handle | description |
+|---|---|--|
+| Name | name | handle for this environment |
+| SSH User | username | SSH/server username |
+| SSH Host | host | SSH/server hostname or IP |
+| SSH Port | port | SSH port |
+| Project Root | root | Path of the Craft installation on the server |
+| Temporary Backup Dir | backupDirectory | Path where database backups will be created on the remote server |
+| PHP Executable | phpPath | Path to `php` executable |
+| DB Dump Client Executable | dbDumpClientPath | Path to `mysqldump` or `pg_dump` executable |
+| Log Verbosity | verbosity | Log level |
+| Environment | environment | Determines the environment, e.g. dev, staging, production. Used so that lower environments are never synced into higher environments |
+| UID | uid | Automatically generated unique identifier. If omitted, this will be automatically generated |
 
 ## Usage
 
@@ -98,11 +63,5 @@ As of version v0.5.0, `craft-sync-db` provides a CP user interface.
 
 To use `craft-sync-db` on the command line:
 `php craft sync-db/sync <remote_key> [log_level]`, where `<remote_key>` is an array key in your configuration file and `[log_level]` (optional) is one of: `verbose`, `normal`, or `quiet` .
-
-## Roadmap
-
-Some things to do, and ideas for potential features:
-
-* YAML Configuration
 
 Brought to you by [UNION](github.com/unionco)

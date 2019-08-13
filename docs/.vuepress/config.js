@@ -43,6 +43,10 @@ module.exports = {
                 link: '/ticketmaster/'
             },
             {
+                text: 'Related Entry Types',
+                link: '/craft-related-entry-types/'
+            },
+            {
                 text: 'UNION',
                 link: 'https://www.union.co/'
             }
@@ -58,6 +62,9 @@ module.exports = {
                 '',
             ],
             '/ticketmaster/': [
+                '',
+            ],
+            '/craft-related-entry-types/': [
                 '',
             ],
             // fallback
