@@ -47,6 +47,10 @@ module.exports = {
                 link: '/craft-related-entry-types/'
             },
             {
+                text: 'Geolocation',
+                link: '/geolocation/'
+            },
+            {
                 text: 'UNION',
                 link: 'https://www.union.co/'
             }
@@ -65,6 +69,9 @@ module.exports = {
                 '',
             ],
             '/craft-related-entry-types/': [
+                '',
+            ],
+            '/geolocation/': [
                 '',
             ],
             // fallback
