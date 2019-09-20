@@ -1,5 +1,7 @@
 # Geolocation
 
+<img src="../../resources/craft-geolocation-logo.svg" height="200px"/>
+
 ## Overview
 
 Craft 3 plugin to integrate geolocation and distance calculation helpers.
