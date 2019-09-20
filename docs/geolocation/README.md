@@ -362,6 +362,3 @@ Event::on(
     }
 );
 ```
-
-## Todo
-* DB Queries with simplemap
