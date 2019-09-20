@@ -8,7 +8,7 @@ Craft 3 plugin to sync database across environments
 
 craft-sync-db uses [`unionco/syncdb`](/syncdb/) to perform database synchronization across your different environments. Both MySQL and PostgreSQL databases are supported.
 
-The plugin works by 
+The plugin works by setting up an SSH session to your configured remote servers. Once connected to the server, it uses that environment's `.env` file to determine the database configuration.
 
 Source code is available on [Github](https://github.com/unionco/craft-sync-db)
 
