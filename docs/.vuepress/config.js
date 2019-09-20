@@ -82,6 +82,7 @@ module.exports = {
         codeLanguages: {
             twig: 'Twig',
             php: 'PHP',
+            bash: 'bash'
         }
     },
     markdown: {

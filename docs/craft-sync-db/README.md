@@ -8,11 +8,15 @@ Craft 3 plugin to sync database across environments
 
 craft-sync-db uses [`unionco/syncdb`](/syncdb/) to perform database synchronization across your different environments. Both MySQL and PostgreSQL databases are supported.
 
+The plugin works by 
+
 Source code is available on [Github](https://github.com/unionco/craft-sync-db)
 
 ## Requirements
 
 This plugin requires Craft CMS 3.0.0-beta.23 or later.
+
+- Ability to connect to remote servers via SSH using SSH
 
 ## Installation
 
@@ -30,6 +34,14 @@ To install the plugin, follow these instructions.
 
 
 ## Configuration
+
+Only remote servers (production, staging, etc) should be configured in the configuration file. The local environment is determined by your `.env` file.
+
+To connect to remote server, you should add your SSH public key to the server so no password is needed to authenticate. The `ssh-copy-id` utility makes this simple:
+
+```bash
+ssh-copy-id <user>@<host>
+```
 
 Since version 0.7.0, configuration is stored as a YAML file in `<CRAFT_BASE_PATH>/config/syncdb.yaml`. Configuration can be edited manually or using the CP settings interface.
 
