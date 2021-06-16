@@ -2,7 +2,7 @@
 
 <img src="../../resources/sync-db.png" height="160px"/>
 
-## Overview 
+## Overview
 
 Craft 3 plugin to sync database across environments
 
@@ -11,6 +11,10 @@ craft-sync-db uses [`unionco/syncdb`](/syncdb/) to perform database synchronizat
 The plugin works by setting up an SSH session to your configured remote servers. Once connected to the server, it uses that environment's `.env` file to determine the database configuration.
 
 Source code is available on [Github](https://github.com/unionco/craft-sync-db)
+
+::: warning
+This is a total rewrite from the 0.9.x release. There are numerous breaking changes, including the configuration file.
+:::
 
 ## Requirements
 
@@ -26,9 +30,9 @@ To install the plugin, follow these instructions.
 
         `cd /path/to/project`
 
-2. Then tell Composer to load the plugin:
+2. Install the package with Composer:
 
-        `composer require unionco/craft-sync-db`
+        `composer require -W unionco/craft-sync-db`
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for craft-sync-db.
 
@@ -43,37 +47,13 @@ To connect to remote server, you should add your SSH public key to the server so
 ssh-copy-id <user>@<host>
 ```
 
-Since version 0.7.0, configuration is stored as a YAML file in `<CRAFT_BASE_PATH>/config/syncdb.yaml`. Configuration can be edited manually or using the CP settings interface.
+## Configuration File
 
-### Global Configuration
+A PHP configuration file will automatically be created at `<craft-site>/config/syncdb.php`. JSON and YAML formats are also supported (with the appropriate extensions), but PHP is preferred and used in the documentation.
 
-| name | handle | description |
-|---|---|--|
-| Skip Tables | `skipTables` | Tables to ignore in the database export/import |
-
-### Environment Configuration
-
-| name | handle | description |
-|---|---|--|
-| Name | name | handle for this environment |
-| SSH User | username | SSH/server username |
-| SSH Host | host | SSH/server hostname or IP |
-| SSH Port | port | SSH port |
-| Project Root | root | Path of the Craft installation on the server |
-| Temporary Backup Dir | backupDirectory | Path where database backups will be created on the remote server |
-| PHP Executable | phpPath | Path to `php` executable |
-| DB Dump Client Executable | dbDumpClientPath | Path to `mysqldump` or `pg_dump` executable |
-| Log Verbosity | verbosity | Log level |
-| Environment | environment | Determines the environment, e.g. dev, staging, production. Used so that lower environments are never synced into higher environments |
-| UID | uid | Automatically generated unique identifier. If omitted, this will be automatically generated |
+For all configuration options, see [SyncDB Configuration](/craft-plugin-docs/syncdb/#configuration)
 
 ## Usage
 
-NOTE: `craft-sync-db` plugin must be installed on the project on the remote server as well.
-
-As of version v0.5.0, `craft-sync-db` provides a CP user interface.
-
-To use `craft-sync-db` on the command line:
-`php craft sync-db/sync <remote_key> [log_level]`, where `<remote_key>` is an array key in your configuration file and `[log_level]` (optional) is one of: `verbose`, `normal`, or `quiet` .
 
 Brought to you by [UNION](github.com/unionco)

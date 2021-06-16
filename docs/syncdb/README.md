@@ -22,7 +22,7 @@ $ composer require unionco/syncdb:^0.10
 
 ## Configuration
 
-See [Configuration](/docs/syncdb/config.md)
+See [Configuration](/syncdb/config.md)
 
 ## Usage
 
@@ -33,7 +33,7 @@ Using established SSH connectivity, this library will determine database credent
 
 ## Getting Started
 
-In addition to the concrete software requirements, below, it is critical to establish key-based SSH connectivity between hosts. See [Connectivity](/docs/syncdb/connectivity.md)
+In addition to the concrete software requirements, below, it is critical to establish key-based SSH connectivity between hosts. See [Connectivity](/syncdb/connectivity.md)
 
 ## Host Requirements
 ### Remote Host:
